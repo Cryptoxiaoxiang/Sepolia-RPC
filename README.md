@@ -12,7 +12,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt i
 执行如下命令
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/MeG0302/Sepolia-node-deployment-script/main/setup.sh)
+bash <(curl -s https://raw.githubusercontent.com/Cryptoxiaoxiang/Sepolia-RPC/refs/heads/main/setup.sh)
 ```
 
 看到如下截图就是对了:
