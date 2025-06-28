@@ -113,7 +113,8 @@ curl http://localhost:3500/eth/v1/node/syncing
 
 添加防火墙规则
 在你的RPC节点上使用：
+```bash
 `sudo ufw allow from "你的Aztec节点IP" to any port 8545 proto tcp`
-
+```
 
 ---
