@@ -64,7 +64,7 @@ services:
       - 8551:8551
     volumes:
       - /root/ethereum/execution:/data
-      - /root/ethereum/jwt.hex:/data/jwt.hex:ro
+      - /root/ethereum/jwt.hex:/jwt.hex
     command:
       - --sepolia
       - --http
@@ -72,7 +72,7 @@ services:
       - --http.addr=0.0.0.0
       - --authrpc.addr=0.0.0.0
       - --authrpc.vhosts=*
-      - --authrpc.jwtsecret=/data/jwt.hex
+      - --authrpc.jwtsecret=/jwt.hex
       - --authrpc.port=8551
       - --syncmode=snap
       - --datadir=/data
@@ -89,7 +89,7 @@ services:
     restart: unless-stopped
     volumes:
       - /root/ethereum/consensus:/data
-      - /root/ethereum/jwt.hex:/data/jwt.hex:ro
+      - /root/ethereum/jwt.hex:/jwt.hex
     depends_on:
       - geth
     ports:
@@ -102,7 +102,7 @@ services:
       - --disable-monitoring
       - --rpc-host=0.0.0.0
       - --execution-endpoint=http://127.0.0.1:8551
-      - --jwt-secret=/data/jwt.hex
+      - --jwt-secret=/jwt.hex
       - --rpc-port=4000
       - --grpc-gateway-corsdomain=*
       - --grpc-gateway-host=0.0.0.0
